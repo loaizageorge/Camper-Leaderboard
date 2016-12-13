@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 //App css
-require('sass!applicationStyles')
+require('style!css!sass!applicationStyles')
 
 ReactDOM.render(
 <Leaderboard/>,
