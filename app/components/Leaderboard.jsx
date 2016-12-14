@@ -35,7 +35,9 @@ var Leaderboard = React.createClass({
 
     return(
       <div>
-        <h1>FCC Leaderboard</h1>
+        <header>
+        <img className = "logo" src = "https://s3.amazonaws.com/freecodecamp/freecodecamp_logo.svg" alt= "FCC logo"/>
+        </header>
         <CamperList campers = {arrayOfCampers}/>
       </div>
     );

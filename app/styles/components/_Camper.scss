@@ -1,10 +1,38 @@
 img{
   height: 50px;
   width: 50px;
+  margin-right: 1rem;
 }
 
 .camper-table{
   width:75%;
   margin: 0 auto;
   border: 1px solid black;
+  margin-bottom: 2rem;
+  overflow-x: hidden;
+}
+
+.table{
+  margin: 0px;
+}
+
+// Style for rows
+
+.camper_rank,
+.camper_username,
+.camper_alltime,
+.camper_recent{
+  border: 1px solid rgb(221,221,221);
+
+}
+
+th{
+  border: 1px solid rgb(221,221,221) ;
+}
+
+.th_alltime,
+.th_recent,
+.camper_alltime,
+.camper_recent{
+  text-align: center;
 }
