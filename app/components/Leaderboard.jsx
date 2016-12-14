@@ -2,7 +2,6 @@ var React = require('react');
 
 var CamperList = require('CamperList');
 var Camper = require('Camper');
-var LeaderboardAPI = require('LeaderboardAPI');
 
 var uuid = require('node-uuid');
 var axios = require('axios');
@@ -14,11 +13,9 @@ var Leaderboard = React.createClass({
     }
   },
 
-  /*
-
-  */
   componentWillMount: function (){
-    const URL = "https://fcctop100.herokuapp.com/api/fccusers/top/recent";
+    // Make initial api call before component is rendered
+    const URL = "https://fcctop100.herokuapp.com/api/fccusers/top/alltime";
 
     axios.get(URL)
     .then((response) =>{
