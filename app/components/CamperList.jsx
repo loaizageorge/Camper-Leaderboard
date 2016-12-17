@@ -26,7 +26,7 @@ var CamperList = React.createClass({
     };
 }
     return(
-      <div className = "table-responsive camper-table">
+      <div className = "camper-table">
         <h2 className = "title">Leaderboard</h2>
         <table className = "table table-striped table-condensed table-hover">
           <thead>
