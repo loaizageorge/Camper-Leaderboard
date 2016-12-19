@@ -5,9 +5,13 @@ var uuid = require('node-uuid'); // Used to create unique IDs for each camper co
 
 var CamperList = React.createClass({
   toggleTopRecent: function(){
+    $('#recent').addClass('active-column');
+    $('#alltime').removeClass('active-column');
     this.props.onToggle('recent');
   },
   toggleTopAlltime: function(){
+    $('#alltime').addClass('active-column');
+    $('#recent').removeClass('active-column');
     this.props.onToggle('alltime');
   },
   render: function(){
@@ -39,8 +43,8 @@ var CamperList = React.createClass({
             <tr>
               <th className = "th_rank">#</th>
               <th className = "th_username">Username</th>
-              <th onClick = {this.toggleTopRecent} className = "th_recent">Points in past 30 days</th>
-              <th onClick = {this.toggleTopAlltime} className = "th_alltime">All time points</th>
+              <th id = "recent" onClick = {this.toggleTopRecent} className =  "th_recent">Points in past 30 days</th>
+              <th id = "alltime" onClick = {this.toggleTopAlltime} className = "th_alltime active-column">All time points</th>
             </tr>
           </thead>
         <tbody>

@@ -12,7 +12,6 @@ var Leaderboard = React.createClass({
       arrayOfCampers: []
     }
   },
-
   componentWillMount: function (){
     this.handleToggle('alltime');
   },
