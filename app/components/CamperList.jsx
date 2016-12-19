@@ -4,6 +4,12 @@ var Camper = require('Camper');
 var uuid = require('node-uuid'); // Used to create unique IDs for each camper component
 
 var CamperList = React.createClass({
+  toggleTopRecent: function(){
+    this.props.onToggle('recent');
+  },
+  toggleTopAlltime: function(){
+    this.props.onToggle('alltime');
+  },
   render: function(){
     var campers = this.props.campers;
     var renderCampers = () =>{
@@ -33,8 +39,8 @@ var CamperList = React.createClass({
             <tr>
               <th className = "th_rank">#</th>
               <th className = "th_username">Username</th>
-              <th className = "th_recent">Points in past 30 days</th>
-              <th className = "th_alltime">All time points</th>
+              <th onClick = {this.toggleTopRecent} className = "th_recent">Points in past 30 days</th>
+              <th onClick = {this.toggleTopAlltime} className = "th_alltime">All time points</th>
             </tr>
           </thead>
         <tbody>
